@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SpiderCalculator</title>
+    <link rel="stylesheet" type="text/css" href="calculator.css>
+    <script language="javascript" type="text/javascript" src="calculator.js"></script>
+  </head>
+  <body>
+	<div id="box"></div>
+	<input type="text" readonly size="18" id="display">
+	<input type="button" value="ON" id="on" onclick="c('0');">
+	<input type="button" value="(" id="brace1" onclick="screen('(');">
+	<input type="button" value=")" id="brace2" onclick="screen(')');">
+	<input type="button" value="*" id="mult" onclick="screen('*');">
+	<input type="button" value="7" id="seven" onclick="screen('7');">
+	<input type="button" value="8" id="eight" onclick="screen('8');">
+	<input type="button" value="9" id="nine" onclick="screen('9');">
+	<input type="button" value="/" id="divsn" onclick="screen('/');">
+	<input type="button" value="4" id="four" onclick="screen('4');">
+	<input type="button" value="5" id="five" onclick="screen('5');">
+	<input type="button" value="6" id="six" onclick="screen('6');">
+	<input type="button" value="-" id="sub" onclick="screen('-');">
+	<input type="button" value="1" id="one" onclick="screen('1');">
+	<input type="button" value="2" id="two" onclick="screen('2');">
+	<input type="button" value="3" id="three" onclick="screen('3');">
+	<input type="button" value="+" id="add" onclick="screen('+');">
+	<input type="button" value="0" id="zero" onclick="screen('0');">
+	<input type="button" value="." id="decimal" onclick="screen('.');">
+	<input type="button" value="del" id="delete" onclick="kill()">
+	<input type="button" value="=" id="answer" onclick="e()">
+	<p> To start a whole new operation which does not involve the answer of the previous operation, click the ON button </p>
+  </body>
+</html>
+
+	

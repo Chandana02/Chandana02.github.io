@@ -1,0 +1,202 @@
+#box {
+		border:1px solid black;
+		width:227px;
+		height:296px;
+		position:absolute;
+		left:5px;
+		top:5px;
+		background-color:#CEF6F5;
+}
+	#display {
+		border:1px solid black;
+		height:60px;
+		width:215px;
+		position:absolute;
+		left:11px;
+		top:11px;
+		background-color:#81F7F3;
+}
+	#on {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:11px;
+		top:76px;
+		background-color:#8A0808;		
+}
+	#brace1 {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:66px;
+		top:76px;
+		background-color:#848484;
+}
+	#brace2 {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:121px;
+		top:76px;
+		background-color:#848484;
+}
+	#mult {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:176px;
+		top:76px;
+		background-color:#585858;
+}
+	#seven {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:11px;
+		top:121px;
+		background-color:#0B2161;
+}
+	#eight {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:66px;
+		top:121px;
+		background-color:#0B2161;
+}
+	#nine {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:121px;
+		top:121px;
+		background-color:#0B2161;
+}
+	#divsn {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:176px;
+		top:121px;
+		background-color:#585858;
+}
+	#four {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:11px;
+		top:166px;
+		background-color:#0B2161;
+}
+	#five {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:66px;
+		top:166px;
+		background-color:#0B2161;
+}
+	#six {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:121px;
+		top:166px;
+		background-color:#0B2161;
+}
+	#sub {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:176px;
+		top:166px;
+		background-color:#585858;
+}
+	#one {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:11px;
+		top:211px;
+		background-color:#0B2161;
+}
+	#two {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:66px;
+		top:211px;
+		background-color:#0B2161;
+}
+	#three {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:121px;
+		top:211px;
+		background-color:#0B2161;
+}
+	#add {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:176px;
+		top:211px;
+		background-color:#585858;
+}
+	#zero {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:11px;
+		top:256px;
+		background-color:#0B2161;
+}
+	#decimal {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:66px;
+		top:256px;
+		background-color:#585858;
+}
+	#delete {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:121px;
+		top:256px;
+		background-color:#8A0808;
+}
+	#answer {
+		border:1px solid black;
+		width:50px;
+		height:40px;
+		position:absolute;
+		left:176px;
+		top:256px;
+		background-color:#585858;
+}
+
+	p {
+		text-align:center;
+}
