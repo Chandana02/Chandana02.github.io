@@ -1,0 +1,95 @@
+<html>
+<head>
+      <style>
+      body {
+      margin: 0px;
+      }
+      </style>
+      <title>Ping Pong</title>
+</head>
+<body onload="startGame()">
+      <canvas id="canvas" style="background-color:gray;">
+      </canvas>
+      <script type="text/javascript">
+      var c = document.getElementById('canvas');
+      c.width = window.innerWidth;
+      c.height = window.innerHeight;
+
+      var animation;
+      var centerX = 125;
+      var centerY = 125;
+      var radius = 30;
+      var boardX = c.width;
+      var boardY = c.height;
+      var ballDx = 2;
+      var ballDy = 2;
+      var paddleWidth = 200;
+      var paddleHeight = 25;
+      var paddleLeft = 300;
+      var paddleTop = c.height - paddleHeight;
+      var hits = 0;
+
+      function startGame() {
+               centerX = 125;
+               centerY = 125;
+               hits = 0;
+               animation = setInterval(createGame, 10);
+      }
+
+      function createGame() {
+               var c = document.getElementById('canvas');
+               var ctx = c.getContext('2d');
+               ctx.clearRect(0, 0, c.width, c.height);
+
+               centerX += ballDx;
+               centerY += ballDy;
+
+               ctx.beginPath();
+               ctx.arc(centerX, centerY, radius, 0, Math.PI*2, false);
+               ctx.stroke();
+               ctx.fillStyle = "purple";
+               ctx.fill();
+
+               ctx.fillStyle = "blue";
+               ctx.fillRect(paddleLeft, paddleTop, paddleWidth, paddleHeight);
+               checkCollision();
+
+               if(centerX > boardX - radius || centerX - radius < 0) {
+                    ballDx *= -1; }
+               if(centerY - radius < 0) { ballDy *= -1; }
+
+               if(centerY - radius > boardY) { clearInterval(animation);
+                                               alert("You lose! :( Try again.");
+                                               startGame();
+                                               }
+      }
+
+      function checkCollision() {
+               if(centerY + radius >= paddleTop && centerY + radius <= paddleTop+10 && centerX > paddleLeft && centerX < paddleLeft + paddleWidth) { ballDy *= -1;
+                                                                                                                 hits += 1;
+                                                                                                                 if(hits == 3) {
+                                                                                                                 alert("Congratulations! you won! Click 'okay' to go to the next level.");
+                                                                                                                 paddleWidth -= 15;
+                                                                                                                 hits = 0;
+                                                                                                                 clearInterval(animation);
+                                                                                                                 startGame(); } }
+      }
+
+      function getKey(e) {
+               switch(e.keyCode) {
+                    case 37:
+                    paddleLeft -= 20;
+                    if(paddleLeft < 0) { paddleLeft = 0; }
+                    break;
+                    
+                    case 39:
+                    paddleLeft += 20;
+                    if(paddleLeft + paddleWidth > boardX) { paddleLeft = boardX - paddleWidth; }
+                    break;
+               }
+      }
+      
+      document.body.onkeydown = getKey;
+      </script>
+</body>
+</html>

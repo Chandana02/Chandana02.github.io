@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>SHM</title>
+</head>
+<body onload="shm()">
+<canvas id="canvas" width="900" height="600" style="border:1px solid #d3d3d3;background-color:black;">
+</canvas>
+<script type="text/javascript">
+var t=0;
+var x =450;
+var tInc=0.1;
+function drawBall(){
+  var c = document.getElementById("canvas");
+  var ctx = c.getContext("2d");
+  if(x>=450&&x<=850)
+  {
+  ctx.clearRect(0, 0, c.width, c.height);
+  x +=400*Math.sin(t*Math.PI/180);
+  ctx.beginPath();
+  ctx.moveTo(50,300);
+  ctx.lineTo(850,300);
+  ctx.strokeStyle="red";
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(x,300,40,0,2*Math.PI, false);
+  ctx.stroke();
+  ctx.fillStyle = "#00A308";
+  ctx.fill();
+  t +=tInc;
+  }
+}
+function shm(){
+  clearInterval(shm);
+  setInterval(drawBall, 10);
+}
+</script>
+</body>
+</html>

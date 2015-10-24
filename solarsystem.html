@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+var c = document.getElementById('canvas');
+c.width = window.innerWidth;
+c.height = window.innerHeight;
+
+var ctx = c.getContext('2d');
+
+function planet(mass, color) {
+         this.color = color;
+         this.mass = mass;
+         this.radius = mass;
+         this.x = 0;
+         this.y = 0;
+         this.angle = 0;
+         this.speed = 10/this.radius;
+}
+
+var planets = [];
+
+var sun = new planet(95, "orange");
+var mercury = new planet(20, "brown");
+var venus = new planet(40, "lightbrown");
+var earth = new planet(50, "blue");
+var mars = new planet(30, "red");
+var jupiter = new planet(90, "yellow");
+var saturn = new planet(80, "pink");
+var uranus = new planet(70, "lightblue");
+var neptune = new planet(60, "blue");
+var pluto = new planet(10, "purple");
+
+planets.push(mercury, venus, earth, mars, jupiter, saturn, uranus, neptune, pluto);
+
+function draw() {
+         ctx.clearRect(0, 0, c.width, c.height);
+         
+         ctx.beginPath();
+         ctx.arc(c.width/2,c.height/2,45,0,2*Math.PI);
+         ctx.stroke();
+         ctx.fillStyle = "orange";
+         ctx.fill();
+
+         for(var i=0; i<9; i++) {
+                 ctx.beginPath();
+                 ctx.arc(c.width/2,c.height/2,(i+1)*50,0,2*Math.PI);
+                 ctx.stroke();
+         }
+
+         for(var i=0; i<10; i++) {
+                 planets[i].x = c.width/2 + Math.cos(planets[i].angle)*(i+1)*50;
+                 planets[i].y = c.height/2 + Math.sin(planets[i].angle)*(i+1)*50;
+                 planets[i].angle += planets[i].speed;
+                 ctx.beginPath();
+                 ctx.arc(planets[i].x,planets[i].y,planets[i].radius/4,0,2*Math.PI);
+                 ctx.stroke();
+                 ctx.fillStyle = planets[i].color;
+                 ctx.fill();
+         }
+}
+
+setInterval(draw, 100);
+</script>
+</body>
+</html>
